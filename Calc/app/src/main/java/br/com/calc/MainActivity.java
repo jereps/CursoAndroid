@@ -3,6 +3,7 @@ package br.com.calc;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,10 +48,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                n1 = Integer.valueOf(edt1.getText().toString());
-                n2 = Integer.valueOf(edt2.getText().toString());
+                if(TextUtils.isEmpty(edt1.getText().toString()) || TextUtils.isEmpty(edt2.getText().toString())){
+                    Toast.makeText(getApplication(), "Os Campos: Número 1 e Número 2 \n Não Pode Ficar vazio. \n Favor Preencher.", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    n1 = Integer.valueOf(edt1.getText().toString());
+                    n2 = Integer.valueOf(edt2.getText().toString());
 
-                Toast.makeText(getApplication(), "Jeremias"+n1+n2, Toast.LENGTH_LONG).show();
+                    total = n1 + n2;
+
+                    txtResultado.setText(total.toString());
+                }
+
+                //Toast.makeText(getApplication(), "Jeremias"+n1+n2, Toast.LENGTH_LONG).show();
 
             }
         });

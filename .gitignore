@@ -2,6 +2,7 @@
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
+/Calc/.idea/vcs.xml
 .DS_Store
 /captures
 # Built application files
