@@ -48,18 +48,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(TextUtils.isEmpty(edt1.getText().toString()) || TextUtils.isEmpty(edt2.getText().toString())){
-                    Toast.makeText(getApplication(), "Os Campos: Número 1 e Número 2 \n Não Pode Ficar vazio. \n Favor Preencher.", Toast.LENGTH_LONG).show();
+                if(TextUtils.isEmpty(edt1.getText().toString())){
+                    Toast.makeText(getApplication(), "Os Campos Número 1 não Pode Ficar vazio", Toast.LENGTH_LONG).show();
+                    edt1.requestFocus();
+                    return;
                 }
                 else {
                     n1 = Integer.valueOf(edt1.getText().toString());
-                    n2 = Integer.valueOf(edt2.getText().toString());
 
-                    total = n1 + n2;
 
-                    txtResultado.setText(total.toString());
                 }
 
+                if(TextUtils.isEmpty(edt2.getText().toString())){
+                    Toast.makeText(getApplication(), "Os Campos Número 2 não Pode Ficar vazio", Toast.LENGTH_LONG).show();
+                    edt2.requestFocus();
+                    return;
+                }
+                else {
+                    n2 = Integer.valueOf(edt2.getText().toString());
+                }
+
+                total = n1 + n2;
+
+                txtResultado.setText(total.toString());
                 //Toast.makeText(getApplication(), "Jeremias"+n1+n2, Toast.LENGTH_LONG).show();
 
             }
