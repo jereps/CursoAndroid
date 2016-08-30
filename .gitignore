@@ -1,8 +1,8 @@
 *.iml
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-/.idea/vcs.xml
+*/local.properties
+*/.idea/workspace.xml
+*/.idea/libraries
+*/.idea/vcs.xml
 .DS_Store
 /captures
 # Built application files
