@@ -21,32 +21,38 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Arroz"
-        android:id="@+id/checkBox" />
+        android:text="Arroz (R$ 2,69)"
+        android:id="@+id/chbArroz" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Leite"/>
+        android:text="Leite (R$ 5,00)"
+        android:id="@+id/chbLeite"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Carne"/>
+        android:text="Carne (R$ 10,00)"
+        android:id="@+id/chbCarne"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Feijão"/>
+        android:text="Feijão (R$ 2,30)"
+        android:id="@+id/chbFeijao"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Refrigerante"/>
+        android:text="Refrigerante (R$ 2,00)"
+        android:id="@+id/chbRefri"/>
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Total da Compra"
+        android:id="@+id/btnTotal"/>
 
 
 
