@@ -1,4 +1,4 @@
-package br.com.sqlite;
+package br.com.sqlite.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import org.xml.sax.helpers.LocatorImpl;
+import br.com.sqlite.R;
 
 public class LoginActivity extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +18,12 @@ public class LoginActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
 
-        EditText edtEmailLogin = (EditText)findViewById(R.id.edtEmailCadastro);
+        EditText edtEmailLogin = (EditText)findViewById(R.id.edtEmailLogin);
         EditText edtSenhaLogin = (EditText)findViewById(R.id.edtSenhaLogin);
         Button btnLogin = (Button)findViewById(R.id.btnLogin);
-
-        btnLogin.setOnClickListener(new View.OnClickListener(){
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View view){
+            public void onClick(View v) {
 
             }
         });
@@ -41,6 +39,4 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

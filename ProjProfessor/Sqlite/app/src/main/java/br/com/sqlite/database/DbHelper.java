@@ -1,4 +1,4 @@
-package br.com.sqlite;
+package br.com.sqlite.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,13 +9,13 @@ import java.lang.reflect.Array;
 public class DbHelper extends SQLiteOpenHelper {
 
     //Nome do banco de dados
-    private static final String database_nome = "Teste.db";
+    private static final String database_nome = "teste.db";
 
     //Versão da base de dados
     private static final int database_versao = 1;
 
     //Criando tabelas
-    private static final String tabela0 = "CREATE TABLE IF NOT EXISTS" + getVersionTable(0) + " ("
+    private static final String usuarios = "CREATE TABLE IF NOT EXISTS usuarios  ("
             + "id_usuario INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "
             + "email_usuario varchar(2) NOT NULL, "
             + "senha_usuario varchar(2) NOT NULL);";
@@ -29,12 +29,22 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL(tabela0);
-        onUpgrade(db, 0, database_versao);
+        db.execSQL(usuarios);
+        onUpgrade(db, 1, database_versao);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        if (oldVersion >= newVersion) return;
+
+        switch (oldVersion){
+            case 1:
+                //upgrade
+            case 2:
+                break;
+            default:
+                throw new IllegalStateException("No upgrade specified for" +oldVersion+ " -> " +newVersion);
+        }
 
     }
 

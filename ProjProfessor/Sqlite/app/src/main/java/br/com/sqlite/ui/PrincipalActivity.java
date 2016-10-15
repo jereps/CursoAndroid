@@ -1,7 +1,9 @@
-package br.com.sqlite;
+package br.com.sqlite.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import br.com.sqlite.R;
 
 public class PrincipalActivity extends AppCompatActivity {
 
