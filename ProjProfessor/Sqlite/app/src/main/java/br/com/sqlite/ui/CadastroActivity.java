@@ -15,7 +15,7 @@ public class CadastroActivity extends AppCompatActivity {
     private String email_usuario;
     private String senha_usuario;
     private String senha2;
-    private DbController dbController;
+    private DbController db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class CadastroActivity extends AppCompatActivity {
                 if (error == 0){
                     Intent it2;
 
-                    dbController.insertRegistro(email_usuario, senha_usuario);
+                    db.insertRegistro(email_usuario, senha_usuario);
                 }
 
             }
@@ -75,7 +75,7 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        dbController = new DbController(getBaseContext());
+        db = new DbController(getBaseContext());
     }
 }
 

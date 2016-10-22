@@ -9,13 +9,13 @@ public class ItemLogin implements Serializable {
     private String email_usuario;
     private String senha_usuario;
 
-    ItemLogin (int id, String email, String senha){
+    public ItemLogin (int id, String email, String senha){
         this.id_usuario = id;
         this.email_usuario = email;
         this.senha_usuario = senha;
     }
 
-    ItemLogin (){
+    public ItemLogin (){
 
     }
 

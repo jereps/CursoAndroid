@@ -3,9 +3,12 @@ package br.com.sqlite.datacontroller;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.icu.text.DateFormat;
 
 import br.com.sqlite.database.DbHelper;
+import br.com.sqlite.datamodel.ItemLogin;
 
 public class DbController {
 
@@ -54,6 +57,31 @@ public class DbController {
         else
             return "Registro inserido com sucesso";
 
+    }
+
+    //select
+    public Boolean selectRegistro(String email, String senha){
+
+        Boolean isValid = false;
+
+        String where = " where email_usuario = '" +email+ "' ";
+        String and = " and senha_usuario = '" +senha+ "' ";
+        String query = " select * from usuario " + where + and;
+
+        Cursor cursor = openConn(leitura).rawQuery(query, null);
+
+        if (cursor != null){
+
+            while (cursor.moveToNext()){
+                ItemLogin itemLogin = new ItemLogin();
+                itemLogin.setId_usuario(cursor.getInt(cursor.getColumnIndex("id_usuario")));
+                itemLogin.setEmail_usuario(cursor.getString(cursor.getColumnIndex("email_usuario")));
+                itemLogin.setSenha_usuario(cursor.getString(cursor.getColumnIndex("senha_usuario")));
+
+            }
+        }
+
+        return isValid;
     }
 
 }
