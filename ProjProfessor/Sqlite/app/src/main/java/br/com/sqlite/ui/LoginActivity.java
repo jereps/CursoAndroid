@@ -53,14 +53,13 @@ public class LoginActivity extends AppCompatActivity {
 
 
                 if (error == 0){
-                    Intent it2;
 
                     if(db.selectRegistro(email_usuario, senha_usuario)) {
-                        Toast.makeText(getBaseContext(), "Login Aceito", Toast.LENGTH_LONG);
-                        Intent it = new Intent(LoginActivity.this, CadastroActivity.class);
+                        Toast.makeText(getBaseContext(), "Login Aceito", Toast.LENGTH_SHORT).show();
+                        Intent it = new Intent(LoginActivity.this, PrincipalActivity.class);
                         startActivity(it);
                     }else{
-                        Toast.makeText(getBaseContext(), "Acesso negado!", Toast.LENGTH_LONG);
+                        Toast.makeText(getBaseContext(), "Acesso negado!", Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -73,8 +72,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-
+                Intent it = new Intent(LoginActivity.this, CadastroActivity.class);
+                startActivity(it);
             }
         });
     }

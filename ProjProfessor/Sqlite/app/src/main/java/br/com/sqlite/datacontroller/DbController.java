@@ -66,7 +66,7 @@ public class DbController {
 
         String where = " where email_usuario = '" +email+ "' ";
         String and = " and senha_usuario = '" +senha+ "' ";
-        String query = " select * from usuario " + where + and;
+        String query = " select * from usuarios " + where + and;
 
         Cursor cursor = openConn(leitura).rawQuery(query, null);
 
