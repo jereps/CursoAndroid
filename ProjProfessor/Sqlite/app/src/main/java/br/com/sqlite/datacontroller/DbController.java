@@ -59,29 +59,6 @@ public class DbController {
 
     }
 
-    //select
-    public Boolean selectRegistro(String email, String senha){
-
-        Boolean isValid = false;
-
-        String where = " where email_usuario = '" +email+ "' ";
-        String and = " and senha_usuario = '" +senha+ "' ";
-        String query = " select * from usuario " + where + and;
-
-        Cursor cursor = openConn(leitura).rawQuery(query, null);
-
-        if (cursor != null){
-
-            while (cursor.moveToNext()){
-                ItemLogin itemLogin = new ItemLogin();
-                itemLogin.setId_usuario(cursor.getInt(cursor.getColumnIndex("id_usuario")));
-                itemLogin.setEmail_usuario(cursor.getString(cursor.getColumnIndex("email_usuario")));
-                itemLogin.setSenha_usuario(cursor.getString(cursor.getColumnIndex("senha_usuario")));
-
-            }
-        }
-
-        return isValid;
-    }
+    
 
 }

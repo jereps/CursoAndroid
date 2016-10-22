@@ -56,8 +56,8 @@ public class LoginActivity extends AppCompatActivity {
 
                     db.selectRegistro(email_usuario, senha_usuario);
 
-                    //Intent it = new Intent(LoginActivity.this, CadastroActivity.class);
-                    //startActivity(it);
+                    Intent it = new Intent(LoginActivity.this, CadastroActivity.class);
+                    startActivity(it);
                 }
 
 
