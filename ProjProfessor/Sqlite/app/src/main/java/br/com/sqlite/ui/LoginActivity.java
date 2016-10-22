@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import br.com.sqlite.R;
 import br.com.sqlite.datacontroller.DbController;
@@ -54,10 +55,13 @@ public class LoginActivity extends AppCompatActivity {
                 if (error == 0){
                     Intent it2;
 
-                    db.selectRegistro(email_usuario, senha_usuario);
-
-                    Intent it = new Intent(LoginActivity.this, CadastroActivity.class);
-                    startActivity(it);
+                    if(db.selectRegistro(email_usuario, senha_usuario)) {
+                        Toast.makeText(getBaseContext(), "Login Aceito", Toast.LENGTH_LONG);
+                        Intent it = new Intent(LoginActivity.this, CadastroActivity.class);
+                        startActivity(it);
+                    }else{
+                        Toast.makeText(getBaseContext(), "Acesso negado!", Toast.LENGTH_LONG);
+                    }
                 }
 
 
