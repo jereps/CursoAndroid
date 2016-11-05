@@ -40,7 +40,7 @@ public class DbController {
         if(db != null) db.close();
     }
 
-    //isert
+    //insert
     public String insertRegistro(String email, String senha){
 
         long resultado;
@@ -84,5 +84,7 @@ public class DbController {
 
         return isValid;
     }
+
+    //select que retorna todos os registros
 
 }

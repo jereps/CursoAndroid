@@ -14,13 +14,6 @@ public class PrincipalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        TextView id = (TextView)findViewById(R.id.id);
-        TextView email = (TextView)findViewById(R.id.email);
-        TextView senha = (TextView)findViewById(R.id.senha);
 
-        ItemLogin itemLogin = new ItemLogin();
-        id.setText(itemLogin.getId_usuario());
-        email.setText(itemLogin.getEmail_usuario());
-        senha.setText(itemLogin.getSenha_usuario());
     }
 }
