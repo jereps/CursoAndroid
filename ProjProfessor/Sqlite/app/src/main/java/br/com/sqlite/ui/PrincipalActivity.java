@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import br.com.sqlite.R;
+import br.com.sqlite.datacontroller.DbController;
 import br.com.sqlite.datamodel.ItemLogin;
 
 public class PrincipalActivity extends AppCompatActivity {
@@ -15,5 +16,7 @@ public class PrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
 
 
+        DbController dbController = new DbController(getBaseContext());
+        dbController.selectAllRegistros();
     }
 }
