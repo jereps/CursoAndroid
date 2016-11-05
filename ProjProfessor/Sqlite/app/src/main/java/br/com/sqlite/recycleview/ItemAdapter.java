@@ -34,7 +34,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ItemAdapter.ViewHolder holder, int position) {
-
+        
     }
 
     @Override
@@ -47,7 +47,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-            email = (TextView)itemView.findViewById(R.id.)
+            email = (TextView)itemView.findViewById(R.id.txtUser);
+            senha = (TextView)itemView.findViewById(R.id.txtSenha);
         }
 
         @Override
