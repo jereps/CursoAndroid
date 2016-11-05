@@ -7,6 +7,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.icu.text.DateFormat;
 
+import java.util.ArrayList;
+
 import br.com.sqlite.database.DbHelper;
 import br.com.sqlite.datamodel.ItemLogin;
 
@@ -86,5 +88,29 @@ public class DbController {
     }
 
     //select que retorna todos os registros
+    public ArrayList<ItemLogin> selectAllRegistros(){
+
+        ArrayList<ItemLogin> myarray = new ArrayList<>();
+
+        ItemLogin itemLogin = new ItemLogin();
+
+        Cursor cursor = openConn(leitura).rawQuery("select * from usuarios", null);
+
+        if (cursor != null){
+
+            while (cursor.moveToNext()){
+                itemLogin.setId_usuario(cursor.getInt(cursor.getColumnIndex("id_usuario")));
+                itemLogin.setEmail_usuario(cursor.getString(cursor.getColumnIndex("email_usuario")));
+                itemLogin.setSenha_usuario(cursor.getString(cursor.getColumnIndex("senha_usuario")));
+                myarray.add(itemLogin);
+            }
+            cursor.close();
+
+        }
+        closseConn();
+
+        return myarray;
+
+    }
 
 }
