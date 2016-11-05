@@ -33,8 +33,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ItemAdapter.ViewHolder holder, int position) {
-        
+        public void onBindViewHolder(ItemAdapter.ViewHolder holder, int position) {
+        ItemLogin itemLogin = lista.get(position);
+        holder.email.setText(itemLogin != null ? itemLogin.getEmail_usuario() : null);
     }
 
     @Override
