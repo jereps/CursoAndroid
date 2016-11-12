@@ -9,4 +9,59 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.perfil.ContatoActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jeremias Ponciano da Silva"
+        android:id="@+id/txt_nome"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        android:textSize="24sp"
+        android:padding="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone Residencial: (12) 3307-3944"
+        android:id="@+id/txt_tel_residencial"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        android:drawableLeft="@android:drawable/sym_action_call"
+        android:drawableStart="@android:drawable/sym_action_call"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/txt_nome"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone Corporativo: (11) 96964-9689"
+        android:id="@+id/txt_tel_corporativo"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        android:drawableLeft="@android:drawable/sym_action_call"
+        android:drawableStart="@android:drawable/sym_action_call"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/txt_tel_residencial"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="E-mail: jeremiason2911@gmail.com"
+        android:id="@+id/txt_email"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:background="@color/colorAccent"
+        android:drawableLeft="@android:drawable/ic_dialog_email"
+        android:drawableStart="@android:drawable/ic_dialog_email"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
 </RelativeLayout>

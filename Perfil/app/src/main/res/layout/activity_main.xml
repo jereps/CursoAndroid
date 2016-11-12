@@ -12,5 +12,67 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txt_info"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:layout_margin="8dp"
+        android:text="Informações" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_nome_completo"
+        android:layout_below="@+id/txt_info"
+        android:hint="Digite seu nome completo"
+        android:layout_margin="8dp"
+        android:maxLines="1"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spn_renda"
+        android:layout_below="@+id/edt_nome_completo"
+        android:layout_alignStart="@+id/edt_nome_completo"
+        android:entries="@array/rendas"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_profissao"
+        android:layout_below="@+id/spn_renda"
+        android:hint="Informe sua profissão"
+        android:layout_margin="8dp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meu Perfil"
+        android:id="@+id/btn_perfil"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/white"
+        android:layout_margin="8dp"  />
+
+
+
+
 </RelativeLayout>

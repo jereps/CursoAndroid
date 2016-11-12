@@ -9,4 +9,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.perfil.PerfilActivity">
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/img_perfil"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/desenho"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="18sp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate gravida urna, accumsan mollis libero aliquam a. Fusce ultricies eu leo eu tempus."
+        android:id="@+id/txt_sobre"
+        android:layout_below="@+id/img_perfil"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visualizar Contato"
+        android:id="@+id/btn_contato"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true" />
+
+
 </RelativeLayout>
